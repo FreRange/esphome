@@ -1,0 +1,27 @@
+external_components:
+  - source:
+      type: git
+      url: https://github.com/FreRange/esphome
+      ref: main
+    components: [ w22515-c ]
+
+i2c:
+  sda: D1
+  scl: D2
+
+sensor:
+  - platform: w22515-c
+    moisture:
+      name: "Soil Moisture"
+      calibration:
+        min_capacity: 300  # Optional (default 245)
+        max_capacity: 600  # Optional (default 550)
+        raw: false         # Use inbuilt conversion.
+      filters:
+        - skip_initial: 1  # First read is zero, skip it.
+    temperature:
+      name: "Soil Temperature"
+      filters:
+        - skip_initial: 1  # First read is zero, skip it.
+        - offset: -0.1     # Calibrate readings.
+    new_address: 0x36      # Change the address upon startup, requires a restart.
