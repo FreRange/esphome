@@ -25,8 +25,8 @@ CONF_BRIGHTNESS_COEFFICIENT = "coefficient"
 CONF_BRIGHTNESS_CONSTANT = "constant"
 CONF_NEW_ADDRESS = "new_address"
 
-chirp_ns = cg.esphome_ns.namespace("chirp")
-chirpComponent = chirp_ns.class_(
+w22515-c_ns = cg.esphome_ns.namespace("w22515-c")
+w22515-cComponent = w22515-c_ns.class_(
     "I2CSoilMoistureComponent", cg.PollingComponent, i2c.I2CDevice
 )
 
@@ -80,7 +80,7 @@ ILLUMINANCE_SCHEMA = (
 CONFIG_SCHEMA = (
     cv.Schema(
         {
-            cv.GenerateID(): cv.declare_id(chirpComponent),
+            cv.GenerateID(): cv.declare_id(w22515-cComponent),
             cv.Optional(CONF_MOISTURE): MOISTURE_SCHEMA,
             cv.Optional(CONF_TEMPERATURE): TEMPERATURE_SCHEMA,
             cv.Optional(CONF_ILLUMINANCE): ILLUMINANCE_SCHEMA,

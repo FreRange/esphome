@@ -1,8 +1,8 @@
-#include "chirp.h"
+#include "w22515-c.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
-namespace chirp {
+namespace w22515-c {
 
 static const char *const TAG = "I2CSensor";
 
@@ -261,5 +261,5 @@ bool I2CSoilMoistureComponent::write_reset_() {
   return true;
 }
 
-}  // namespace chirp
+}  // namespace w22515-c
 }  // namespace esphome

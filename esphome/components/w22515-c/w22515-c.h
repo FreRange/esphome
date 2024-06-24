@@ -5,7 +5,7 @@
 #include "esphome/components/i2c/i2c.h"
 
 namespace esphome {
-namespace chirp {
+namespace w22515-c {
 
 class I2CSoilMoistureComponent : public PollingComponent, public i2c::I2CDevice, public sensor::Sensor {
  public:
@@ -74,5 +74,5 @@ class I2CSoilMoistureComponent : public PollingComponent, public i2c::I2CDevice,
   Device device_;
 };
 
-}  // namespace chirp
+}  // namespace w22515-c
 }  // namespace esphome
