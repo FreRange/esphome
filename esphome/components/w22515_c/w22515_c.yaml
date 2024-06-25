@@ -3,14 +3,14 @@ external_components:
       type: git
       url: https://github.com/FreRange/esphome
       ref: main
-    components: [ w22515-c ]
+    components: [ w22515_c ]
 
 i2c:
   sda: D1
   scl: D2
 
 sensor:
-  - platform: w22515-c
+  - platform: w22515_c
     moisture:
       name: "Soil Moisture"
       calibration:

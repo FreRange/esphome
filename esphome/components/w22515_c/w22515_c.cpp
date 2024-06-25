@@ -1,8 +1,8 @@
-#include "esphome/components/w22515-c/w22515-c.h"
+#include "esphome/components/w22515_c/w22515_c.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
-namespace w22515-c {
+namespace w22515_c {
 
 static const char *const TAG = "I2CSensor";
 
@@ -261,5 +261,5 @@ bool I2CSoilMoistureComponent::write_reset_() {
   return true;
 }
 
-}  // namespace w22515-c
+}  // namespace w22515_c
 }  // namespace esphome
