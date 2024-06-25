@@ -1,4 +1,4 @@
-#include "w22515-c.h"
+#include "esphome/components/w22515-c/w22515-c.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
